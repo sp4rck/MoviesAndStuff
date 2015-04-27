@@ -58,6 +58,8 @@ public class DetailFragment extends Fragment {
         if (intent != null && intent.hasExtra(Intent.EXTRA_TEXT)) {
             String imdbID = intent.getStringExtra(Intent.EXTRA_TEXT);
             performGetRequest(imdbID);
+        }else if(getArguments() != null){
+            performGetRequest(getArguments().getString("imdbId"));
         }
 
         return rootView;
@@ -84,8 +86,6 @@ public class DetailFragment extends Fragment {
         @Override
         public void onRequestSuccess(Item item) {
             progressDialog.hide();
-            // listFollowers could be null just if contentManager.getFromCache(...)
-            // doesn't return anything.
             if (item == null) {
                 getActivity().setProgressBarIndeterminateVisibility(false);
                 return;

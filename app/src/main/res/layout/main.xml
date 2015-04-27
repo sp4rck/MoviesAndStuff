@@ -1,38 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
-
-    <LinearLayout
-        android:id="@+id/search_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:descendantFocusability="beforeDescendants"
-        android:focusableInTouchMode="true"
-        android:orientation="horizontal"
-        android:padding="2dip" >
-
-        <AutoCompleteTextView
-            android:id="@+id/search_field"
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/search_hint_text"
-            android:inputType="textNoSuggestions"
-            android:singleLine="true" />
-
-        <Button
-            android:id="@+id/search_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/search_button_text" />
-    </LinearLayout>
-
-    <ListView
-        android:id="@+id/search_results"
-        android:layout_width="fill_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1" />
-
-</LinearLayout>
+<fragment xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_fragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:name="com.sp4rck.moviesandstuff.fragments.MainFragment"
+    tools:layout="@layout/fragment_main"></fragment>
